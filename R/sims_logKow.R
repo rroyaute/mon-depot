@@ -5,11 +5,11 @@ theme_set(theme_bw(14))
 # Simulations simple pour la relation entre coefficient de partage n-octanol et toxictité
 
 
-n_compo = 1000 # nombre de composés
+n_compo = 20 # nombre de composés
 logKow = rnorm(n_compo, 2, 1)  # vecteur de Kow
-b0 = -4 # Ordonnée à l'origine
-b1 = .9 # Pente
-sigma = .25 # variance résiduelle
+b0 = 2 # Ordonnée à l'origine
+b1 = 28 # Pente
+sigma = 25 # variance résiduelle
 
 log_inv_LC50 = rnorm(n_compo, b0 + b1 * logKow, sigma)
 
